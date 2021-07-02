@@ -22,7 +22,7 @@ npm install --save-dev save-to-file
 
 ## Usage ##
 
-Typically, a svelte component or module is built using [rollup.js](https://rollupjs.org/guide/en/) and published as an [npm](https://docs.npmjs.com/) package. Such a scenario requires to provide a `package.json` and a `rollup.config.js` file, at least. The first should provide a `svelte` fields which points to the preprocessed Svelte source while the latter should include `save-to-file` as part of the build process.
+Typically, a svelte component or module is built using [rollup.js](https://rollupjs.org/guide/en/) and published as an [npm](https://docs.npmjs.com/) package. Such a scenario requires to provide a `package.json` and a `rollup.config.js` file, at least. The first should provide a `svelte` field which points to the preprocessed Svelte source while the latter should include `save-to-file` as part of the build process.
 
 ### package.json ###
 
