@@ -2,7 +2,7 @@
 
 a Svelte preprocessor that writes the results of any previous preprocessing into a file
 
-For Svelte to work as foreseen (i.e. to create Javascript and CSS bundles with no multiple inclusing of any required dependencies), all Svelte components, actions and other modules should be provided as source code (perhaps along with other build results such as CJS, AMD or UMD modules, e.g., if these modules are not only to be used in Svelte).
+For Svelte to work as foreseen (i.e. to create Javascript and CSS bundles with no multiple inclusing of any required dependencies), all Svelte components, actions and other modules should be provided as source code (perhaps along with other build results such as, e.g., CJS, AMD or UMD modules, if these modules are not only to be used in Svelte).
 
 However, this leads to a problem: if a module does not consist of plain JavaScript, CSS and HTML but requires some *preprocessing* to convert the original sources into the mentioned formats, such source code can only be handled by build environments which include any required preprocessor.
 
