@@ -29,7 +29,7 @@ Typically, a svelte component or module is built using [rollup.js](https://rollu
 A Svelte-compatible package specification should include the following line
 
 ```
-"svelte":"./dist-folder/package-name.svelte",
+"svelte":"./dist-folder/package-name.svelte"
 ```
 
 where `./dist-folder` specifies the path to your distribution files and `package-name.svelte` is the file name of the preprocessed Svelte source.
