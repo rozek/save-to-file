@@ -2,7 +2,7 @@
   "name": "save-to-file",
   "version": "0.1.0",
   "description": "a Svelte preprocessor that writes the results of any previous preprocessing into a file",
-  "main":  "./dist/save-to-file.js",
+  "main": "./dist/save-to-file.js",
   "types": "./dist/save-to-file.d.ts",
   "scripts": {
     "build": "rimraf dist && tsc && rollup -c rollup.config.js && mv src/*.d.ts dist && rm src/*.js",
@@ -32,6 +32,6 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "javascript-interface-library": "file:../javascript-interface-library"
+    "javascript-interface-library": "^0.1.11"
   }
 }
