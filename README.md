@@ -17,11 +17,48 @@ If included as part of the build process, `save-to-file` writes the results of a
 ## Installation ##
 
 ```
-npm install save-to-file
+npm install --save-dev save-to-file
 ```
 
 ## Usage ##
 
+Typically, a svelte component or module is built using [rollup.js](https://rollupjs.org/guide/en/) and published as an [npm](https://docs.npmjs.com/) package. Such a scenario requires to provide a `package.json` and a `rollup.config.js` file, at least. The first should provide a `svelte` fields which points to the preprocessed Svelte source while the latter should include `save-to-file` as part of the build process.
+
+### package.json ###
+
+A Svelte-compatible package specification should include the following line
+
+```
+"svelte":"./dist-folder/package-name.svelte",
+```
+
+where `./dist-folder` specifies the path to your distribution files and `package-name.svelte` is the file name of the preprocessed Svelte source.
+
+### rollup.config.js ###
+
+A Svelte-compatible rollup configuration should import and invoke `save-to-file`
+
+```
+import saveToFile from 'save-to-file'
+...
+
+export default {
+  ...
+  plugins: [
+    svelte({ preprocess:[
+      autoPreprocess(...),
+      saveToFile('./dist-folder/package-name.svelte')
+    ]}),
+    ...
+  ],
+}
+```
+
+where `./dist-folder` again specifies the path to your distribution files and `package-name.svelte` is the file name of the preprocessed Svelte source.
+
+Usually, a rollup configuration contains many additional instructions, but the lines shown above should help figuring out how and where to insert `save-to-file`.
+
+If you need a complete working example, you may have a look at the build configuration of the [svelte-sortable-flat-list-view](https://github.com/rozek/svelte-sortable-flat-list-view).
 
 ## Build Instructions ##
 
