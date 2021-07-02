@@ -9,13 +9,15 @@ export default {
   input: './src/save-to-file.ts',
   output: [
     {
-      file:     './dist/save-to-file.esm.js',
-      format:   'esm',
-      sourcemap:true,
+      file:     './dist/save-to-file.js',
+      format:    'umd',
+      name:      'saveToFile',
+      noConflict:true,
+      sourcemap: true,
+      plugins: [terser({ format:{ comments:false, safari10:true } })],
     }
   ],
   plugins: [
     resolve(), commonjs(), typescript(),
-    terser({ format:{ comments:false } }),
   ],
 };
