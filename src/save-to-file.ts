@@ -35,7 +35,6 @@
     style?: StylePreprocessor
   }
 
-
 /**** escapedHTMLAttribute ****/
 
   function escapedHTMLAttribute (OriginalValue:string):string {
@@ -55,8 +54,6 @@
       }
     )
   }
-
-
 
 /**** saveToFile - the actual, complete preprocessor ****/
 
@@ -86,7 +83,6 @@
       return Promise.resolve({ code:content })
     }
 
-
   /**** processScript ****/
 
     function processScript (input: {
@@ -110,7 +106,6 @@
       }
       return Promise.resolve({ code:content })
     }
-
 
   /**** processStyle ****/
 
