@@ -1,6 +1,6 @@
 {
   "name": "save-to-file",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a Svelte preprocessor that writes the results of any previous preprocessing into a file",
   "main": "./dist/save-to-file.js",
   "types": "./dist/save-to-file.d.ts",
