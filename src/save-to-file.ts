@@ -77,6 +77,8 @@
 
         if (ValueIsEmptyString(processedMarkup)) {
           processedMarkup = ''
+        } else {
+          processedMarkup += '\n'
         }
       }
 
