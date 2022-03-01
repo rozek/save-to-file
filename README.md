@@ -40,7 +40,7 @@ where `./dist-folder` specifies the path to your distribution files and `package
 
 A Svelte-compatible rollup configuration should import and invoke `save-to-file`
 
-```
+```javascript
 import saveToFile from 'save-to-file'
 ...
 
